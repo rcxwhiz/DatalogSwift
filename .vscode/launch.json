@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug DatalogSwift",
+            "program": "${workspaceFolder:DatalogSwift}/.build/debug/DatalogSwift",
+            "args": [],
+            "cwd": "${workspaceFolder:DatalogSwift}",
+            "preLaunchTask": "swift: Build Debug DatalogSwift"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release DatalogSwift",
+            "program": "${workspaceFolder:DatalogSwift}/.build/release/DatalogSwift",
+            "args": [],
+            "cwd": "${workspaceFolder:DatalogSwift}",
+            "preLaunchTask": "swift: Build Release DatalogSwift"
+        }
+    ]
+}

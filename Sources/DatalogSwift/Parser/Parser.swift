@@ -165,7 +165,7 @@ extension Parser {
     }
 
     private static func query(iter: TokenIterator) throws -> Predicate? {
-        if let predicate = try predicate(iter: iter, optional: false) {
+        if let predicate = try predicate(iter: iter, optional: true) {
             let _ = try requriedToken(iter: iter, expectedType: .questionMark)
             return predicate
         } else {

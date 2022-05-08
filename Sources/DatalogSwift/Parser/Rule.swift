@@ -7,3 +7,16 @@ class Rule {
         self.schemes = schemes
     }
 }
+
+extension Rule: CustomStringConvertible {
+
+    public var description: String {
+        var desc = "\(headPredicate) :- "
+        for scheme in schemes {
+            desc.append("\(scheme),")
+        }
+        desc.removeLast()
+        desc.append(".")
+        return desc
+    }
+}

@@ -12,3 +12,21 @@ class Predicate {
         self.parameters = parameters
     }
 }
+
+extension Predicate: CustomStringConvertible {
+
+    public var description: String {
+        var desc = "\(name)("
+        for param in parameters {
+            switch param {
+                case .id(let value):
+                    desc.append("\(value),")
+                case .string(let value):
+                    desc.append("\(value),")
+            }
+        }
+        desc.removeLast()
+        desc.append(")")
+        return desc
+    }
+}

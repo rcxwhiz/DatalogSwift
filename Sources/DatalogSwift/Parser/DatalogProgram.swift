@@ -15,21 +15,21 @@ class DatalogProgram {
 extension DatalogProgram: CustomStringConvertible {
 
     public var description: String {
-        var desc = "Schemes(\(schemes.count)):\n"
+        var desc = "Schemes(\(schemes.count)):"
         for scheme in schemes {
-            desc.append("  \(scheme)\n")
+            desc.append("\n  \(scheme)")
         }
-        desc.append("Facts(\(facts.count)):\n")
+        desc.append("\nFacts(\(facts.count)):")
         for fact in facts {
-            desc.append("  \(fact).\n")
+            desc.append("\n  \(fact).")
         }
-        desc.append("Rules(\(rules.count)):\n")
+        desc.append("\nRules(\(rules.count)):")
         for rule in rules {
-            desc.append("  \(rule)\n")
+            desc.append("\n  \(rule)")
         }
-        desc.append("Queries(\(queries.count)):\n")
+        desc.append("\nQueries(\(queries.count)):")
         for query in queries {
-            desc.append("  \(query)?\n")
+            desc.append("\n  \(query)?")
         }
         return desc
     }

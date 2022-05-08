@@ -11,6 +11,6 @@ class Rule {
 extension Rule: CustomStringConvertible {
 
     public var description: String {
-        return "\(headPredicate) :- \(schemes.joined(separator: ","))."
+        return "\(headPredicate) :- \(schemes.map { $0.description }.joined(separator: ","))."
     }
 }
